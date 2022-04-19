@@ -1,0 +1,33 @@
+.color-block-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 0;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .color-block {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    min-width: 130px;
+  
+    &--box {
+      width: 48px;
+      height: 48px;
+      margin-right: 4px;
+      border-radius: 8px;
+      border: 1px solid;
+    }
+  
+    &--text {
+      font-size: 14px;
+      color: #333333;
+      
+      p {
+        margin: 0 0 8px 0;
+      }
+    }
+  }
+}
