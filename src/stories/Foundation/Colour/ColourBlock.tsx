@@ -1,5 +1,5 @@
 import React from 'react';
-import './colour.scss';
+import './colourBlock.scss';
 
 interface ColourProps {
   id: string;
