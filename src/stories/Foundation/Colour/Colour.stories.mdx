@@ -2,19 +2,90 @@ import { Meta } from '@storybook/addon-docs';
 
 import { ColourBlock } from './ColourBlock';
 
+import colourDo from './assets/colour-do.png';
+import colourDont from './assets/colour-dont.png';
+
 <Meta title="Foundation/Colour/Overview" />
+
+<style>{`
+  .guideline-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .guideline-container .guideline-block {
+    width: calc(50% - 32px);
+  }
+  .guideline-container .guideline-block p {
+    margin: 8px 0 0;
+  }
+  .guideline-container .guideline-block--title {
+    font-weight: bold;
+  }
+  .guideline-container .guideline-block--bar {
+    width: 100%;
+    height: 8px;
+  }
+  .guideline-container .guideline-block--do .guideline-block--bar {
+    background-color: green;
+  }
+  .guideline-container .guideline-block--do .guideline-block--title {
+    color: green;
+  }
+  .guideline-container .guideline-block--dont .guideline-block--bar {
+    background-color: red;
+  }
+  .guideline-container .guideline-block--dont .guideline-block--title {
+    color: red;
+  }
+  .guideline-container .guideline-block--image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #737272;
+    width: 100%;
+    img {
+      width: fit;
+    }
+  }
+`}</style>
 
 # Colour
 
 Colour themes are designed to be harmonious, and accessible UI elements. Maintaining consistent digital interface throughout starts with the right use of colours. The following are the foundations used to achieve a consistent user interface.
 
-<div className="color-block-wrapper">
-  <ColourBlock id="grey-1" color="#000000" name="Pitch black" />
-  <ColourBlock id="grey-2" color="#171616" name="Charcoal grey" />
-  <ColourBlock id="grey-3" color="#252525" name="Shadow grey" />
-  <ColourBlock id="grey-4" color="#171616" name="Ash grey" />
-  <ColourBlock id="grey-5" color="#ffffff" name="Pure white" border="#000000" />
+## Guidelines
+
+<div className="guideline-container">
+  <div className="guideline-block">
+    <div className="guideline-block--do">
+      <div className="guideline-block--image">
+        <img src={colourDo} alt="colourDo" />
+      </div>
+      <div>
+        <div className="guideline-block--bar"></div>
+        <p className="guideline-block--title">Do</p>
+        <p>Only use the colours defined here</p>
+      </div>
+    </div>
+  </div>
+  <div className="guideline-block">
+    <div className="guideline-block--dont">
+      <div className="guideline-block--image">
+        <img src={colourDont} alt="colourDont" />
+      </div>
+      <div>
+        <div className="guideline-block--bar"></div>
+        <p className="guideline-block--title">Don't</p>
+        <p>Don't use the colours that doesn't meet color contrast standard</p>
+      </div>
+    </div>
+  </div>
 </div>
+
+## Primary colours
+
+A primary color is the color displayed most frequently across your app's screens and components.
 
 <div className="color-block-wrapper">
   <ColourBlock id="green-1" color="#539877" name="Fern green" />
@@ -22,4 +93,16 @@ Colour themes are designed to be harmonious, and accessible UI elements. Maintai
   <ColourBlock id="green-3" color="#73F9BC" name="Seafoam green #2" />
   <ColourBlock id="green-4" color="#7BF9C0" name="Seafoam green #3" />
   <ColourBlock id="green-5" color="#BFFFE1" name="Light green" />
+</div>
+
+## Neutral colours
+
+A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of your UI.
+
+<div className="color-block-wrapper">
+  <ColourBlock id="grey-1" color="#000000" name="Pitch black" />
+  <ColourBlock id="grey-2" color="#171616" name="Charcoal grey" />
+  <ColourBlock id="grey-3" color="#252525" name="Shadow grey" />
+  <ColourBlock id="grey-4" color="#171616" name="Ash grey" />
+  <ColourBlock id="grey-5" color="#ffffff" name="Pure white" border="#000000" />
 </div>
