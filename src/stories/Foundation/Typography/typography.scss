@@ -1,0 +1,136 @@
+$lato-url: "./assets/Lato/";
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Lato Light"), local("Lato-Light"),
+    url("#{$lato-url}Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"),
+    url("#{$lato-url}Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato Bold"), local("Lato-Bold"),
+    url("#{$lato-url}Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Lato Black"), local("Lato-Black"),
+    url("#{$lato-url}Lato-Black.ttf") format("truetype");
+}
+
+.lato-text {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.2;
+
+  &--title-1 {
+    font-size: 70px;
+    &_light {
+      font-weight: 300;
+    }
+    &_regular {
+      font-weight: 400;
+    }
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &--title-2 {
+    font-size: 55px;
+    &_light {
+      font-weight: 300;
+    }
+    &_regular {
+      font-weight: 400;
+    }
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &--title-3 {
+    font-size: 40px;
+    &_light {
+      font-weight: 300;
+    }
+    &_regular {
+      font-weight: 400;
+    }
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &--title-4 {
+    font-size: 30px;
+    &_light {
+      font-weight: 300;
+    }
+    &_regular {
+      font-weight: 400;
+    }
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &--paragraph-1 {
+    font-size: 28px;
+    &_light {
+      font-weight: 300;
+    }
+    &_regular {
+      font-weight: 400;
+    }
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &--paragraph-2 {
+    font-size: 18px;
+    &_light {
+      font-weight: 300;
+    }
+    &_regular {
+      font-weight: 400;
+    }
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &--caption {
+    font-size: 15px;
+    &_light {
+      font-weight: 300;
+    }
+    &_regular {
+      font-weight: 400;
+    }
+    &_bold {
+      font-weight: 700;
+    }
+  }
+}
+
+.josefinsan-text {
+  font-family: 'Josefin Sans', sans-serif;
+  &--title-1 {
+
+  }
+}
