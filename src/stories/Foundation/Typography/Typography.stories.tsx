@@ -1,5 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {
+  previewTemplate,
+  DEFAULT_REACT_CODESANDBOX,
+} from 'storybook-addon-preview';
+
+import scsspreview from '!!raw-loader!./typography.scss';
+import tsxpreview from '!!raw-loader!./Typography.tsx';
 
 import { LatoTextBlock } from './Typography';
 
@@ -23,6 +30,21 @@ export default {
       options: ['light', 'regular', 'bold'],
       control: { type: 'select' },
     },
+  },
+  parameters: {
+    preview: [
+      {
+        tab: 'typography.scss',
+        template: previewTemplate`${scsspreview}`,
+        language: 'css',
+        copy: true,
+      },
+      {
+        tab: 'Typography.tsx',
+        template: previewTemplate`${tsxpreview}`,
+        codesandbox: DEFAULT_REACT_CODESANDBOX(['@egjs/react-infinitegrid']),
+      },
+    ],
   },
 } as ComponentMeta<typeof LatoTextBlock>;
 
