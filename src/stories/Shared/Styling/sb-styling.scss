@@ -1,5 +1,13 @@
-// @use "../../Foundation/foundation.scss";
+@use "../../Foundation/foundation.scss" as foundation;
 
-// body {
-//   color: $charcole-grey;
-// }
+body {
+  font-family: 'Lato', sans-serif;
+  color: foundation.$charcole-grey;
+  font-size: 14px;
+}
+
+#root {
+  >.lato-text {
+    text-align: center;
+  }
+}

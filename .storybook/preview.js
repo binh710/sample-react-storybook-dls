@@ -1,3 +1,5 @@
+import "../src/stories/Shared/Styling/sb-styling.scss";
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
